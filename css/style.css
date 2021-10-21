@@ -1,0 +1,162 @@
+/*Code 3*/
+body{
+    font-family: "Alegreya Sans SC", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+
+  /*Code 4,5,6*/
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_links li a{
+    color:inherit; /*Style the links so that they have the same color even after they have been visited*/
+  }
+
+
+/*Code 7*/
+.card header
+{
+  background: #288080;
+  border: 2px solid #45ADAD;
+  padding: 20px 0;
+  border-radius: 7px 7px 0 0;
+}
+
+
+/*Code 8*/
+.pricing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Code 9*/
+.card{
+    flex-basis:450px;
+}
+
+/*Code 10*/
+.gallery img
+{
+  border: 10px #50C7C7 solid;
+  margin: 10px;
+  width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*Code 11*/
+  #logo{
+  animation-name: growLogo;
+  animation-duration: 5s;
+ }
+ @-webkit-keyframes growLogo{
+    from {width: 50px}
+    to {width: 425px}
+  
+    from {opacity: 0;}
+    to {opacity: 1}
+  }
+
+ @keyframes growLogo{
+    from {width: 50px}
+    to {width: 425px}
+  
+    from {opacity: 0;}
+    to {opacity: 1}
+  }
+
+
+/*Code 12 -- not fully completed*/
+  @media screen and (min-width: 850px){
+    header{
+      flex-direction: row;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+    }
+    .nav_links{
+        flex-direction: row;
+      }
+       /*Code 15*/
+      .card {
+        flex-basis: 230px;
+      }  
+  }
+
+  /*Code 14*/
+  @media (prefers-reduced-motion) {
+    #logo {
+      animation: none;
+    }
+  
+  }
+
+  @media print {
+
+    /*Code 15*/
+    body {
+      background-image: none;
+    }
+
+    /*Code 16*/
+    nav {
+        width: 100%
+      }
+    
+      .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      /*Code 17*/
+      .pricing {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      @counter-style thumbs{
+        system: cyclic;
+        symbols: "\1F44D";
+        suffix: " ";
+      }
+        .pricing ul {
+            list-style: thumbs;
+          }
+
+      
+
+      /*Code 18*/
+      .card {
+        border: 2px solid #45ADAD;
+        flex-basis: 200px;
+      }
+    
+      /*Code 19*/
+      #gallery {
+        display: none;
+    
+      }
+    
+      .gallery {
+        display: none;
+    
+      }
+
+
+}
