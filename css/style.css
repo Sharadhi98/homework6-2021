@@ -92,9 +92,9 @@ body{
     .nav_links{
         flex-direction: row;
       }
-       /*Code 15*/
+       /*Code 13*/
       .card {
-        flex-basis: 230px;
+        flex-basis: 250px;
       }  
   }
 
