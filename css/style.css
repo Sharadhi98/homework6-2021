@@ -136,6 +136,8 @@ body{
       .pricing {
         display: flex;
         align-items: flex-end;
+          flex-flow: row;
+        flex-wrap:nowrap;
       }
 
        .pricing li:nth-child(even):after{
